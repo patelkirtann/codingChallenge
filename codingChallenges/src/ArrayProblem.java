@@ -39,17 +39,14 @@ public class ArrayProblem {
         for (int i = 1; i < totalNumber; i++) {
             array[i] = (int) (Math.random() * 2);
         }
-
         System.out.println(Arrays.toString(array));
     }
-
 
     private String finalResult() {
         String win = "no";
         int count;
 
         for (count = 0; count < totalNumber; ) {
-
             if (array[count + 1] == 0) {
                 count++;
                 win = "yes";
@@ -93,10 +90,6 @@ public class ArrayProblem {
                 win = "no";
                 break;
             }
-
-//            if (count > totalNumber) {
-//                win = "yes";
-//            }
         }
         return win;
     }

@@ -36,12 +36,11 @@ public class ReverseString {
             String s = pop();
             output += s;
         }
-
         return output;
     }
 
     public static void main(String[] args) {
-        ReverseString reverseString = new ReverseString("Hello World");
+        ReverseString reverseString = new ReverseString("Hello  World");
         System.out.println(reverseString.revString());
     }
 }
