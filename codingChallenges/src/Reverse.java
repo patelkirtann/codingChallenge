@@ -39,7 +39,7 @@ public class Reverse {
 
     public static void main(String[] args) {
 
-        Reverse reverse = new Reverse("kirtan");
+        Reverse reverse = new Reverse("kIrtan");
         System.out.println(reverse.word);
         System.out.println(reverse.revWord());
         if (reverse.word.contains(" ")){
