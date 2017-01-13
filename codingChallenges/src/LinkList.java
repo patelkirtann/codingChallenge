@@ -35,10 +35,41 @@ public class LinkList {
         first = newLink;
     }
 
+    public Link find(int key){
+        Link current = first;
+        while (current.key != key){
+            if (current.next == null ){
+                return null;
+            }else {
+                current = current.next;
+            }
+        }
+        return current;
+    }
+
     public Link deleteFirst() {
         Link temp = first;
         first = first.next;
         return temp;
+    }
+
+    public Link delete(int key){
+        Link current = first;
+        Link previous = first;
+        while (current.key != key){
+            if (current.next == null){
+                return null;
+            }else {
+                previous = current;
+                current = current.next;
+            }
+        }
+        if (current == first){
+            first = first.next;
+        }else {
+            previous.next = current.next;
+        }
+        return current;
     }
 
     public void display() {
