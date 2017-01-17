@@ -35,12 +35,12 @@ public class LinkList {
         first = newLink;
     }
 
-    public Link find(int key){
+    public Link find(int key) {
         Link current = first;
-        while (current.key != key){
-            if (current.next == null ){
+        while (current.key != key) {
+            if (current.next == null) {
                 return null;
-            }else {
+            } else {
                 current = current.next;
             }
         }
@@ -53,20 +53,20 @@ public class LinkList {
         return temp;
     }
 
-    public Link delete(int key){
+    public Link delete(int key) {
         Link current = first;
         Link previous = first;
-        while (current.key != key){
-            if (current.next == null){
+        while (current.key != key) {
+            if (current.next == null) {
                 return null;
-            }else {
+            } else {
                 previous = current;
                 current = current.next;
             }
         }
-        if (current == first){
+        if (current == first) {
             first = first.next;
-        }else {
+        } else {
             previous.next = current.next;
         }
         return current;
@@ -90,8 +90,10 @@ public class LinkList {
 
         linkList.display();
 
+        System.out.println("Found : " + (linkList.find(2)).toString());
+
         while (!linkList.isEmpty()) {
-          Link delete = linkList.deleteFirst();
+            Link delete = linkList.deleteFirst();
             System.out.print("Deleted: ");
             delete.displayLink();
         }
