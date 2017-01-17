@@ -1,24 +1,24 @@
 /**
  * Created by kt_ki on 1/17/2017.
  */
-class Link_Stack {
-    public double data;
-    public Link_Stack next;
+//class Link_Stack {
+//    public double data;
+//    public Link_Stack next;
+//
+//    public Link_Stack(double data) {
+//        this.data = data;
+//        next = null;
+//    }
+//
+//    public void displayLink() {
+//        System.out.print(data + " ");
+//    }
+//}
 
-    public Link_Stack(double data) {
-        this.data = data;
-        next = null;
-    }
+class StackList {
+   public Main_Link first;
 
-    public void displayLink() {
-        System.out.print(data + " ");
-    }
-}
-
-class LinkList_Stack {
-   public Link_Stack first;
-
-    public LinkList_Stack() {
+    public StackList() {
         first = null;
     }
 
@@ -27,20 +27,20 @@ class LinkList_Stack {
     }
 
     public void addFirst(double data) {
-        Link_Stack newLink = new Link_Stack(data);
+        Main_Link newLink = new Main_Link(data);
         newLink.next = first;
         first = newLink;
     }
 
     public double deleteFirst(){
-        Link_Stack temp = first;
+        Main_Link temp = first;
         first = first.next;
         return temp.data;
     }
 
     public void displayList(){
         System.out.print("Stack Values :");
-        Link_Stack current = first;
+        Main_Link current = first;
         while (current != null){
             current.displayLink();
             current = current.next;
@@ -51,10 +51,10 @@ class LinkList_Stack {
 
 public class LinkedStack {
 
-    public LinkList_Stack theList;
+    public StackList theList;
 
     public LinkedStack(){
-        theList = new LinkList_Stack();
+        theList = new StackList();
     }
 
     public void push(double value){

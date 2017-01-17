@@ -1,23 +1,23 @@
 /**
  * Created by kt_ki on 1/15/2017.
  */
-class Link_Double {
-    public double data;
-    public Link_Double next;
-
-    public Link_Double(double data) {
-        this.data = data;
-        next = null;
-    }
-
-    public void displayLink() {
-        System.out.print(data + " ");
-    }
-}
+//class Link_Double {
+//    public double data;
+//    public Link_Double next;
+//
+//    public Link_Double(double data) {
+//        this.data = data;
+//        next = null;
+//    }
+//
+//    public void displayLink() {
+//        System.out.print(data + " ");
+//    }
+//}
 
 public class DoubleEndedLink {
-    public Link_Double first;
-    public Link_Double last;
+    public Main_Link first;
+    public Main_Link last;
 
     public DoubleEndedLink() {
         first = null;
@@ -29,7 +29,7 @@ public class DoubleEndedLink {
     }
 
     public void addFirst(double data) {
-        Link_Double newLink = new Link_Double(data);
+        Main_Link newLink = new Main_Link(data);
         if (isEmpty()){
             first = newLink;
             last = newLink;
@@ -40,7 +40,7 @@ public class DoubleEndedLink {
     }
 
     public void addLast(double data) {
-        Link_Double newLink = new Link_Double(data);
+        Main_Link newLink = new Main_Link(data);
         if (isEmpty()) {
             first = newLink;
             last = newLink;
@@ -61,7 +61,7 @@ public class DoubleEndedLink {
 
     public void displayList() {
         System.out.print("List (first-->last): ");
-        Link_Double current = first;
+        Main_Link current = first;
         while (current != null) {
             current.displayLink();
             current = current.next;
