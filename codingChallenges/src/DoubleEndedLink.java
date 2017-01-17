@@ -1,11 +1,11 @@
 /**
  * Created by kt_ki on 1/15/2017.
  */
-class LinkD {
+class Link_Double {
     public double data;
-    public LinkD next;
+    public Link_Double next;
 
-    public LinkD(double data) {
+    public Link_Double(double data) {
         this.data = data;
         next = null;
     }
@@ -16,8 +16,8 @@ class LinkD {
 }
 
 public class DoubleEndedLink {
-    public LinkD first;
-    public LinkD last;
+    public Link_Double first;
+    public Link_Double last;
 
     public DoubleEndedLink() {
         first = null;
@@ -29,7 +29,7 @@ public class DoubleEndedLink {
     }
 
     public void addFirst(double data) {
-        LinkD newLink = new LinkD(data);
+        Link_Double newLink = new Link_Double(data);
         if (isEmpty()){
             first = newLink;
             last = newLink;
@@ -40,7 +40,7 @@ public class DoubleEndedLink {
     }
 
     public void addLast(double data) {
-        LinkD newLink = new LinkD(data);
+        Link_Double newLink = new Link_Double(data);
         if (isEmpty()) {
             first = newLink;
             last = newLink;
@@ -61,7 +61,7 @@ public class DoubleEndedLink {
 
     public void displayList() {
         System.out.print("List (first-->last): ");
-        LinkD current = first;
+        Link_Double current = first;
         while (current != null) {
             current.displayLink();
             current = current.next;
