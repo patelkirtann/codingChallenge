@@ -29,8 +29,8 @@ public class SortedList {
         }
     }
 
-    public double remove() {
-        double temp = first.data;
+    public Main_Link remove() {
+        Main_Link temp = first;
         first = first.next;
         return temp;
     }

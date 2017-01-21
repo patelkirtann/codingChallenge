@@ -4,10 +4,12 @@
 public class Main_Link {
     public double data;
     public Main_Link next;
+    public Main_Link previous;
 
     public Main_Link(double data) {
         this.data = data;
         next = null;
+        previous  = null;
     }
 
     public void displayLink() {
